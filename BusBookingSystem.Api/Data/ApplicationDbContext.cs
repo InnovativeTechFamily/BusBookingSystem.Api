@@ -69,16 +69,73 @@ namespace BusBookingSystem.Api.Data
                 .HasForeignKey(r => r.ToCityId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            // Ensure BoardingPoint and DroppingPoint FKs to Bus do not cascade-delete (prevent multiple cascade paths)
+            builder.Entity<BoardingPoint>()
+                .HasOne(bp => bp.Bus)
+                .WithMany(b => b.BoardingPoints)
+                .HasForeignKey(bp => bp.BusId)
+                .OnDelete(DeleteBehavior.Restrict);
 
+            builder.Entity<DroppingPoint>()
+                .HasOne(dp => dp.Bus)
+                .WithMany(b => b.DroppingPoints)
+                .HasForeignKey(dp => dp.BusId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Configure SeatLock relationships explicitly to avoid multiple cascade paths
             builder.Entity<SeatLock>()
                 .HasOne(sl => sl.User)
                 .WithMany()
-                .HasForeignKey(sl => sl.UserId);
+                .HasForeignKey(sl => sl.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<SeatLock>()
+                .HasOne(sl => sl.Bus)
+                .WithMany()
+                .HasForeignKey(sl => sl.BusId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<SeatLock>()
+                .HasOne(sl => sl.Seat)
+                .WithMany(s => s.SeatLocks)
+                .HasForeignKey(sl => sl.SeatId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<SeatLock>()
+                .HasOne(sl => sl.BoardingPoint)
+                .WithMany()
+                .HasForeignKey(sl => sl.BoardingPointId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<SeatLock>()
+                .HasOne(sl => sl.DroppingPoint)
+                .WithMany()
+                .HasForeignKey(sl => sl.DroppingPointId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Booking>()
                 .HasOne(b => b.User)
                 .WithMany(u => u.Bookings)
                 .HasForeignKey(b => b.UserId);
+
+            // Configure Booking relationships explicitly and set DeleteBehavior.Restrict to avoid multiple cascade paths
+            builder.Entity<Booking>()
+                .HasOne(b => b.Bus)
+                .WithMany()
+                .HasForeignKey(b => b.BusId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<Booking>()
+                .HasOne(b => b.BoardingPoint)
+                .WithMany(bp => bp.Bookings)
+                .HasForeignKey(b => b.BoardingPointId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<Booking>()
+                .HasOne(b => b.DroppingPoint)
+                .WithMany(dp => dp.Bookings)
+                .HasForeignKey(b => b.DroppingPointId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Configure indexes
             builder.Entity<SeatLock>()

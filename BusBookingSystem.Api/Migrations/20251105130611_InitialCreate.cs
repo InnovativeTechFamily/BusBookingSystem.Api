@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BusBookingSystem.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class FixCascadeDeleteIssue : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -236,7 +236,7 @@ namespace BusBookingSystem.Api.Migrations
                         column: x => x.BusId,
                         principalTable: "Buses",
                         principalColumn: "BusId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -318,7 +318,7 @@ namespace BusBookingSystem.Api.Migrations
                         column: x => x.BusId,
                         principalTable: "Buses",
                         principalColumn: "BusId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -385,19 +385,19 @@ namespace BusBookingSystem.Api.Migrations
                         column: x => x.BoardingPointId,
                         principalTable: "BoardingPoints",
                         principalColumn: "PointId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Bookings_Buses_BusId",
                         column: x => x.BusId,
                         principalTable: "Buses",
                         principalColumn: "BusId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Bookings_DroppingPoints_DroppingPointId",
                         column: x => x.DroppingPointId,
                         principalTable: "DroppingPoints",
                         principalColumn: "PointId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -424,31 +424,31 @@ namespace BusBookingSystem.Api.Migrations
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_SeatLocks_BoardingPoints_BoardingPointId",
                         column: x => x.BoardingPointId,
                         principalTable: "BoardingPoints",
                         principalColumn: "PointId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_SeatLocks_Buses_BusId",
                         column: x => x.BusId,
                         principalTable: "Buses",
                         principalColumn: "BusId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_SeatLocks_DroppingPoints_DroppingPointId",
                         column: x => x.DroppingPointId,
                         principalTable: "DroppingPoints",
                         principalColumn: "PointId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_SeatLocks_Seats_SeatId",
                         column: x => x.SeatId,
                         principalTable: "Seats",
                         principalColumn: "SeatId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(

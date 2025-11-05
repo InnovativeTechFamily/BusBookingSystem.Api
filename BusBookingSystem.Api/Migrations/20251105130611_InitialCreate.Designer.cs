@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BusBookingSystem.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251105124312_FixCascadeDeleteIssue")]
-    partial class FixCascadeDeleteIssue
+    [Migration("20251105130611_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -771,7 +771,7 @@ namespace BusBookingSystem.Api.Migrations
                     b.HasOne("BusBookingSystem.Api.Models.Entities.Bus", "Bus")
                         .WithMany("BoardingPoints")
                         .HasForeignKey("BusId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Bus");
@@ -782,19 +782,19 @@ namespace BusBookingSystem.Api.Migrations
                     b.HasOne("BusBookingSystem.Api.Models.Entities.BoardingPoint", "BoardingPoint")
                         .WithMany("Bookings")
                         .HasForeignKey("BoardingPointId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("BusBookingSystem.Api.Models.Entities.Bus", "Bus")
                         .WithMany()
                         .HasForeignKey("BusId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("BusBookingSystem.Api.Models.Entities.DroppingPoint", "DroppingPoint")
                         .WithMany("Bookings")
                         .HasForeignKey("DroppingPointId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("BusBookingSystem.Api.Models.Entities.ApplicationUser", "User")
@@ -885,7 +885,7 @@ namespace BusBookingSystem.Api.Migrations
                     b.HasOne("BusBookingSystem.Api.Models.Entities.Bus", "Bus")
                         .WithMany("DroppingPoints")
                         .HasForeignKey("BusId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Bus");
@@ -918,31 +918,31 @@ namespace BusBookingSystem.Api.Migrations
                     b.HasOne("BusBookingSystem.Api.Models.Entities.BoardingPoint", "BoardingPoint")
                         .WithMany()
                         .HasForeignKey("BoardingPointId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("BusBookingSystem.Api.Models.Entities.Bus", "Bus")
                         .WithMany()
                         .HasForeignKey("BusId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("BusBookingSystem.Api.Models.Entities.DroppingPoint", "DroppingPoint")
                         .WithMany()
                         .HasForeignKey("DroppingPointId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("BusBookingSystem.Api.Models.Entities.Seat", "Seat")
                         .WithMany("SeatLocks")
                         .HasForeignKey("SeatId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("BusBookingSystem.Api.Models.Entities.ApplicationUser", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("BoardingPoint");
