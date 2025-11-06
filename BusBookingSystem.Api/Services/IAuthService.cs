@@ -1,6 +1,6 @@
 ﻿using BusBookingSystem.Api.Models.DTOs.Auth;
 
-namespace BusBookingSystem.API.Services
+namespace BusBookingSystem.Api.Services
 {
     public interface IAuthService
     {

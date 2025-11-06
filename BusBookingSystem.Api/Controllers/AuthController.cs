@@ -1,7 +1,7 @@
 ﻿using BusBookingSystem.Api.Models.DTOs.Auth;
 //using BusBookingSystem.API.Interfaces;
 //using BusBookingSystem.API.Models.DTOs.Auth;
-using BusBookingSystem.API.Services;
+using BusBookingSystem.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BusBookingSystem.API.Controllers

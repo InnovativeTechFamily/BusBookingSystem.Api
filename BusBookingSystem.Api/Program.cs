@@ -1,6 +1,6 @@
 ﻿using BusBookingSystem.Api.Data;
 using BusBookingSystem.Api.Models.Entities;
-using BusBookingSystem.API.Services;
+using BusBookingSystem.Api.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -78,7 +78,7 @@ namespace BusBookingSystem.Api
 
             // ✅ Register Services
             builder.Services.AddScoped<IAuthService, AuthService>();
-            //builder.Services.AddScoped<IBusService, BusService>();
+            builder.Services.AddScoped<IBusService, BusService>();
             //builder.Services.AddScoped<ISeatService, SeatService>();
             //builder.Services.AddScoped<IBookingService, BookingService>();
             //builder.Services.AddScoped<IPaymentService, PaymentService>();
@@ -112,19 +112,19 @@ namespace BusBookingSystem.Api
             app.MapControllers();
 
 			// Seed initial data
-			using (var scope = app.Services.CreateScope())
-			{
-				var services = scope.ServiceProvider;
-				try
-				{
-					await SeedDataService.Initialize(services);
-				}
-				catch (Exception ex)
-				{
-					var logger = services.GetRequiredService<ILogger<Program>>();
-					logger.LogError(ex, "An error occurred seeding the DB.");
-				}
-			}
+			//using (var scope = app.Services.CreateScope())
+			//{
+			//	var services = scope.ServiceProvider;
+			//	try
+			//	{
+			//		await SeedDataService.Initialize(services);
+			//	}
+			//	catch (Exception ex)
+			//	{
+			//		var logger = services.GetRequiredService<ILogger<Program>>();
+			//		logger.LogError(ex, "An error occurred seeding the DB.");
+			//	}
+			//}
 
 			app.Run();
         }

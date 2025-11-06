@@ -4,7 +4,7 @@ using BusBookingSystem.API.Helpers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace BusBookingSystem.API.Services
+namespace BusBookingSystem.Api.Services
 {
 	public class SeedDataService
 	{
