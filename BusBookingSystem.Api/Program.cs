@@ -1,6 +1,5 @@
 ﻿using BusBookingSystem.Api.Data;
 using BusBookingSystem.Api.Models.Entities;
-using BusBookingSystem.Api.Services;
 using BusBookingSystem.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -112,22 +111,22 @@ namespace BusBookingSystem.Api
 
             app.MapControllers();
 
-            // Seed Data
-            using (var scope = app.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                try
-                {
-                    await SeedDataService.Initialize(services);
-                }
-                catch (Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "Error seeding DB.");
-                }
-            }
+			// Seed initial data
+			using (var scope = app.Services.CreateScope())
+			{
+				var services = scope.ServiceProvider;
+				try
+				{
+					await SeedDataService.Initialize(services);
+				}
+				catch (Exception ex)
+				{
+					var logger = services.GetRequiredService<ILogger<Program>>();
+					logger.LogError(ex, "An error occurred seeding the DB.");
+				}
+			}
 
-            app.Run();
+			app.Run();
         }
     }
 }
