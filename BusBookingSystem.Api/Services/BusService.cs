@@ -2,7 +2,7 @@
 using BusBookingSystem.Api.Models.DTOs.Bus;
 using BusBookingSystem.Api.Services;
 
-using BusBookingSystem.API.Models.DTOs.Seat;
+using BusBookingSystem.Api.Models.DTOs.Seat;
 using Microsoft.EntityFrameworkCore;
 
 namespace BusBookingSystem.Api.Services

@@ -1,6 +1,8 @@
 ﻿using BusBookingSystem.Api.Data;
 using BusBookingSystem.Api.Models.Entities;
 using BusBookingSystem.Api.Services;
+using BusBookingSystem.Api.Interfaces;
+using BusBookingSystem.Api.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -79,7 +81,7 @@ namespace BusBookingSystem.Api
             // ✅ Register Services
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IBusService, BusService>();
-            //builder.Services.AddScoped<ISeatService, SeatService>();
+            builder.Services.AddScoped<ISeatService, SeatService>();
             //builder.Services.AddScoped<IBookingService, BookingService>();
             //builder.Services.AddScoped<IPaymentService, PaymentService>();
             //builder.Services.AddScoped<IRedisService, RedisService>();

@@ -1,5 +1,5 @@
 ﻿using BusBookingSystem.Api.Models.DTOs.Bus;
-using BusBookingSystem.API.Models.DTOs.Seat;
+using BusBookingSystem.Api.Models.DTOs.Seat;
 
 namespace BusBookingSystem.Api.Services
 {

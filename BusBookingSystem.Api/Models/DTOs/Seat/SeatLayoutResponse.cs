@@ -1,4 +1,4 @@
-﻿namespace BusBookingSystem.API.Models.DTOs.Seat
+﻿namespace BusBookingSystem.Api.Models.DTOs.Seat
 {
 	public class SeatLayoutResponse
 	{
