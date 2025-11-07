@@ -1,0 +1,810 @@
+{
+	"info": {
+		"_postman_id": "d3296ace-f80e-483f-a026-fe0d48dff124",
+		"name": "BusBookingSystemAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29231260"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fullName\": \"Rajesh Kumar\",\r\n  \"email\": \"rajesh.kumar11@email.com\",\r\n  \"phoneNumber\": \"+919976543210\",\r\n  \"password\": \"SecurePass@123\",\r\n  \"confirmPassword\": \"SecurePass@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_Url}}/api/Auth/register",
+							"host": [
+								"{{base_Url}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"fullName\": \"Rajesh Kumar\",\r\n  \"email\": \"rajesh.kumar11@email.com\",\r\n  \"phoneNumber\": \"+919976543210\",\r\n  \"password\": \"SecurePass@123\",\r\n  \"confirmPassword\": \"SecurePass@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_Url}}/api/Auth/register",
+									"host": [
+										"{{base_Url}}"
+									],
+									"path": [
+										"api",
+										"Auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "990"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 06:38:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Registration successful\",\n    \"data\": {\n        \"userId\": \"89bc184b-b2bb-45b2-be51-b564726057ee\",\n        \"email\": \"rajesh.kumar11@email.com\",\n        \"fullName\": \"Rajesh Kumar\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Ijg5YmMxODRiLWIyYmItNDViMi1iZTUxLWI1NjQ3MjYwNTdlZSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJhamVzaC5rdW1hcjExQGVtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJSYWplc2ggS3VtYXIiLCJqdGkiOiI5YWM2Y2YzZC1iMWI3LTQyMWUtYjMwOC0zN2RlMTRmODljYzkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDdXN0b21lciIsImV4cCI6MTc2MjQxNDcwNCwiaXNzIjoiQnVzQm9va2luZ1N5c3RlbS5BUEkiLCJhdWQiOiJCdXNCb29raW5nU3lzdGVtLkNsaWVudCJ9.InS96Q2cARJDgj8Op8HW9E9osCMq3yfikngKxpGa1SU\",\n        \"refreshToken\": \"rt_3c69830199304e18b55e3dda6c65d494\",\n        \"expiresIn\": 3600,\n        \"role\": \"Customer\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"email\": \"rajesh.kumar11@email.com\",\r\n  \"password\": \"SecurePass@123\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_Url}}/api/Auth/login",
+							"host": [
+								"{{base_Url}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n  \"email\": \"rajesh.kumar11@email.com\",\r\n  \"password\": \"SecurePass@123\"\r\n \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_Url}}/api/Auth/login",
+									"host": [
+										"{{base_Url}}"
+									],
+									"path": [
+										"api",
+										"Auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "983"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 06:41:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"userId\": \"89bc184b-b2bb-45b2-be51-b564726057ee\",\n        \"email\": \"rajesh.kumar11@email.com\",\n        \"fullName\": \"Rajesh Kumar\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Ijg5YmMxODRiLWIyYmItNDViMi1iZTUxLWI1NjQ3MjYwNTdlZSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJhamVzaC5rdW1hcjExQGVtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJSYWplc2ggS3VtYXIiLCJqdGkiOiI4OWI4M2VkMi04ZDQ5LTRmMjctOTYxYi0xYjAyOWIyZmZjMTkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDdXN0b21lciIsImV4cCI6MTc2MjQxNDg4NiwiaXNzIjoiQnVzQm9va2luZ1N5c3RlbS5BUEkiLCJhdWQiOiJCdXNCb29raW5nU3lzdGVtLkNsaWVudCJ9.MVm8vM9F5NSwpqKBtP-xC1nq-qP4JY9ohtmouYj52-o\",\n        \"refreshToken\": \"rt_5f0baced355b4fa0ab29928de8cb3e82\",\n        \"expiresIn\": 3600,\n        \"role\": \"Customer\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Buses",
+			"item": [
+				{
+					"name": "search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"fromCityId\": \"CITY_MUM_001\",\r\n  \"toCityId\": \"CITY_PUN_002\",\r\n  \"journeyDate\": \"2025-11-06\",\r\n  \"passengerCount\": 2\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_Url}}/api/Buses/search",
+							"host": [
+								"{{base_Url}}"
+							],
+							"path": [
+								"api",
+								"Buses",
+								"search"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n  \"fromCityId\": \"CITY_MUM_001\",\r\n  \"toCityId\": \"CITY_PUN_002\",\r\n  \"journeyDate\": \"2025-11-06\",\r\n  \"passengerCount\": 2\r\n \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_Url}}/api/Buses/search",
+									"host": [
+										"{{base_Url}}"
+									],
+									"path": [
+										"api",
+										"Buses",
+										"search"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "2621"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 07:33:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Buses found successfully\",\n    \"data\": {\n        \"searchId\": \"SEARCH_20251106_276e7f94a2d446a19274f13ea59785b6\",\n        \"totalBuses\": 2,\n        \"buses\": [\n            {\n                \"busId\": \"BUS_RL_001\",\n                \"busName\": \"Royal Luxury Express\",\n                \"busNumber\": \"MH-01-AB-1234\",\n                \"busType\": \"AC Sleeper\",\n                \"operatorId\": \"OP_001\",\n                \"operatorName\": \"SwiftBus Travels\",\n                \"rating\": 4.8,\n                \"totalReviews\": 245,\n                \"departureTime\": \"06:30:00\",\n                \"arrivalTime\": \"10:00:00\",\n                \"duration\": \"03:30:00\",\n                \"departureLocation\": \"Mumbai\",\n                \"arrivalLocation\": \"Pune\",\n                \"totalSeats\": 36,\n                \"availableSeats\": 36,\n                \"baseFare\": 1899,\n                \"isPremium\": true,\n                \"amenities\": [\n                    \"WiFi\",\n                    \"Charging\",\n                    \"Blanket\",\n                    \"Entertainment\",\n                    \"Water\",\n                    \"Snacks\",\n                    \"GPS\"\n                ],\n                \"cancellationPolicy\": \"Free cancellation before 24 hours\",\n                \"boardingPoints\": [\n                    {\n                        \"pointId\": \"BP_MUM_001\",\n                        \"name\": \"Mumbai Central Station\",\n                        \"address\": \"Platform 2, Mumbai Central Railway Station\",\n                        \"time\": \"06:30:00\",\n                        \"landmark\": \"Near Western Express Highway\"\n                    },\n                    {\n                        \"pointId\": \"BP_MUM_002\",\n                        \"name\": \"Dadar West\",\n                        \"address\": \"Near Shivaji Park, Dadar West\",\n                        \"time\": \"06:50:00\",\n                        \"landmark\": \"Opposite Dadar Market\"\n                    },\n                    {\n                        \"pointId\": \"BP_PUN_001\",\n                        \"name\": \"Pune Railway Station\",\n                        \"address\": \"Main Entrance, Pune Junction\",\n                        \"time\": \"18:00:00\",\n                        \"landmark\": \"Platform 1 Exit\"\n                    },\n                    {\n                        \"pointId\": \"BP_PUN_002\",\n                        \"name\": \"Hinjewadi IT Park\",\n                        \"address\": \"Phase 1, Rajiv Gandhi Infotech Park\",\n                        \"time\": \"18:30:00\",\n                        \"landmark\": \"Near Gate 2\"\n                    }\n                ],\n                \"droppingPoints\": [\n                    {\n                        \"pointId\": \"DP_MUM_001\",\n                        \"name\": \"Mumbai Central Station\",\n                        \"address\": \"Platform 2, Mumbai Central Railway Station\",\n                        \"time\": \"21:30:00\",\n                        \"landmark\": \"Near Western Express Highway\"\n                    },\n                    {\n                        \"pointId\": \"DP_MUM_002\",\n                        \"name\": \"Dadar West\",\n                        \"address\": \"Near Shivaji Park, Dadar West\",\n                        \"time\": \"21:50:00\",\n                        \"landmark\": \"Opposite Dadar Market\"\n                    },\n                    {\n                        \"pointId\": \"DP_PUN_001\",\n                        \"name\": \"Pune Railway Station\",\n                        \"address\": \"Main Entrance, Pune Junction\",\n                        \"time\": \"10:00:00\",\n                        \"landmark\": \"Platform 1 Exit\"\n                    },\n                    {\n                        \"pointId\": \"DP_PUN_002\",\n                        \"name\": \"Hinjewadi IT Park\",\n                        \"address\": \"Phase 1, Rajiv Gandhi Infotech Park\",\n                        \"time\": \"10:30:00\",\n                        \"landmark\": \"Near Gate 2\"\n                    }\n                ]\n            },\n            {\n                \"busId\": \"BUS_SE_002\",\n                \"busName\": \"Swift Executive\",\n                \"busNumber\": \"MH-01-CD-5678\",\n                \"busType\": \"AC Semi-Sleeper\",\n                \"operatorId\": \"OP_001\",\n                \"operatorName\": \"SwiftBus Travels\",\n                \"rating\": 4.8,\n                \"totalReviews\": 245,\n                \"departureTime\": \"08:00:00\",\n                \"arrivalTime\": \"12:00:00\",\n                \"duration\": \"04:00:00\",\n                \"departureLocation\": \"Mumbai\",\n                \"arrivalLocation\": \"Pune\",\n                \"totalSeats\": 40,\n                \"availableSeats\": 0,\n                \"baseFare\": 1299,\n                \"isPremium\": false,\n                \"amenities\": [\n                    \"WiFi\",\n                    \"Charging\",\n                    \"Water\"\n                ],\n                \"cancellationPolicy\": \"Free cancellation before 24 hours\",\n                \"boardingPoints\": [\n                    {\n                        \"pointId\": \"BP_MUM_003\",\n                        \"name\": \"Mumbai Central Station\",\n                        \"address\": \"Platform 3, Mumbai Central Railway Station\",\n                        \"time\": \"08:00:00\",\n                        \"landmark\": \"Near Western Express Highway\"\n                    }\n                ],\n                \"droppingPoints\": []\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "busbyid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"busId\": \"BUS_CE_003\",\r\n  \"journeyDate\": \"2025-11-06\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_Url}}/api/Buses/{{busid}}/seat-layout?journeyDate=2025-11-16",
+							"host": [
+								"{{base_Url}}"
+							],
+							"path": [
+								"api",
+								"Buses",
+								"{{busid}}",
+								"seat-layout"
+							],
+							"query": [
+								{
+									"key": "journeyDate",
+									"value": "2025-11-16"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n  \"busId\": \"BUS_CE_003\",\r\n  \"journeyDate\": \"2025-11-06\"\r\n \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_Url}}/api/Buses/{{busid}}/seat-layout?journeyDate=2025-11-16",
+									"host": [
+										"{{base_Url}}"
+									],
+									"path": [
+										"api",
+										"Buses",
+										"{{busid}}",
+										"seat-layout"
+									],
+									"query": [
+										{
+											"key": "journeyDate",
+											"value": "2025-11-16"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "10471"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 08:22:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Seat layout retrieved successfully\",\n    \"data\": {\n        \"busId\": \"BUS_RL_001\",\n        \"busName\": \"Royal Luxury Express\",\n        \"journeyDate\": \"2025-11-16T00:00:00\",\n        \"layoutType\": \"2+1\",\n        \"totalSeats\": 36,\n        \"availableSeats\": 36,\n        \"decks\": [\n            {\n                \"deckType\": \"Lower\",\n                \"totalSeats\": 20,\n                \"availableSeats\": 20,\n                \"seats\": [\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L1\",\n                        \"seatNumber\": \"L1\",\n                        \"rowNumber\": 1,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 1,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L10\",\n                        \"seatNumber\": \"L10\",\n                        \"rowNumber\": 5,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 5,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L11\",\n                        \"seatNumber\": \"L11\",\n                        \"rowNumber\": 6,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 6,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L12\",\n                        \"seatNumber\": \"L12\",\n                        \"rowNumber\": 6,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 6,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L13\",\n                        \"seatNumber\": \"L13\",\n                        \"rowNumber\": 7,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 7,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L14\",\n                        \"seatNumber\": \"L14\",\n                        \"rowNumber\": 7,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 7,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L15\",\n                        \"seatNumber\": \"L15\",\n                        \"rowNumber\": 8,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 8,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L16\",\n                        \"seatNumber\": \"L16\",\n                        \"rowNumber\": 8,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 8,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L17\",\n                        \"seatNumber\": \"L17\",\n                        \"rowNumber\": 9,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 9,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L18\",\n                        \"seatNumber\": \"L18\",\n                        \"rowNumber\": 9,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 9,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L19\",\n                        \"seatNumber\": \"L19\",\n                        \"rowNumber\": 10,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 10,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L2\",\n                        \"seatNumber\": \"L2\",\n                        \"rowNumber\": 1,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 1,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L20\",\n                        \"seatNumber\": \"L20\",\n                        \"rowNumber\": 10,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 10,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L3\",\n                        \"seatNumber\": \"L3\",\n                        \"rowNumber\": 2,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": true,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 2,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L4\",\n                        \"seatNumber\": \"L4\",\n                        \"rowNumber\": 2,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 2,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L5\",\n                        \"seatNumber\": \"L5\",\n                        \"rowNumber\": 3,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 3,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L6\",\n                        \"seatNumber\": \"L6\",\n                        \"rowNumber\": 3,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": true,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 3,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L7\",\n                        \"seatNumber\": \"L7\",\n                        \"rowNumber\": 4,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 4,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L8\",\n                        \"seatNumber\": \"L8\",\n                        \"rowNumber\": 4,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 4,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_L9\",\n                        \"seatNumber\": \"L9\",\n                        \"rowNumber\": 5,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Lower\",\n                        \"seatType\": \"Sleeper\",\n                        \"price\": 1899,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": true,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 5,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    }\n                ]\n            },\n            {\n                \"deckType\": \"Upper\",\n                \"totalSeats\": 16,\n                \"availableSeats\": 16,\n                \"seats\": [\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U1\",\n                        \"seatNumber\": \"U1\",\n                        \"rowNumber\": 1,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 1,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U10\",\n                        \"seatNumber\": \"U10\",\n                        \"rowNumber\": 5,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 5,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U11\",\n                        \"seatNumber\": \"U11\",\n                        \"rowNumber\": 6,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 6,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U12\",\n                        \"seatNumber\": \"U12\",\n                        \"rowNumber\": 6,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 6,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U13\",\n                        \"seatNumber\": \"U13\",\n                        \"rowNumber\": 7,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 7,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U14\",\n                        \"seatNumber\": \"U14\",\n                        \"rowNumber\": 7,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 7,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U15\",\n                        \"seatNumber\": \"U15\",\n                        \"rowNumber\": 8,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 8,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U16\",\n                        \"seatNumber\": \"U16\",\n                        \"rowNumber\": 8,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 8,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U2\",\n                        \"seatNumber\": \"U2\",\n                        \"rowNumber\": 1,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 1,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U3\",\n                        \"seatNumber\": \"U3\",\n                        \"rowNumber\": 2,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 2,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U4\",\n                        \"seatNumber\": \"U4\",\n                        \"rowNumber\": 2,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 2,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U5\",\n                        \"seatNumber\": \"U5\",\n                        \"rowNumber\": 3,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 3,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U6\",\n                        \"seatNumber\": \"U6\",\n                        \"rowNumber\": 3,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 3,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U7\",\n                        \"seatNumber\": \"U7\",\n                        \"rowNumber\": 4,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 4,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U8\",\n                        \"seatNumber\": \"U8\",\n                        \"rowNumber\": 4,\n                        \"columnNumber\": 2,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": false,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 4,\n                            \"column\": 2,\n                            \"side\": \"Right\"\n                        },\n                        \"bookedBy\": null\n                    },\n                    {\n                        \"seatId\": \"SEAT_BUS_RL_001_U9\",\n                        \"seatNumber\": \"U9\",\n                        \"rowNumber\": 5,\n                        \"columnNumber\": 1,\n                        \"deck\": \"Upper\",\n                        \"seatType\": \"Premium Sleeper\",\n                        \"price\": 2199,\n                        \"status\": \"Available\",\n                        \"isLadiesOnly\": false,\n                        \"isWindowSeat\": true,\n                        \"isPremium\": true,\n                        \"position\": {\n                            \"row\": 5,\n                            \"column\": 1,\n                            \"side\": \"Left\"\n                        },\n                        \"bookedBy\": null\n                    }\n                ]\n            }\n        ],\n        \"lastUpdated\": \"2025-11-06T08:22:36.2053353Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Seats",
+			"item": [
+				{
+					"name": "lock",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"busId\": \"BUS_RL_001\",\r\n  \"journeyDate\": \"2025-11-06\",\r\n  \"seatIds\": [\"SEAT_BUS_RL_001_L1\"],\r\n  \"boardingPointId\": \"BP_MUM_001\",\r\n  \"droppingPointId\": \"DP_PUN_001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_Url}}/api/seats/lock",
+							"host": [
+								"{{base_Url}}"
+							],
+							"path": [
+								"api",
+								"seats",
+								"lock"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "alreadyBooked",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"busId\": \"BUS_RL_001\",\r\n  \"journeyDate\": \"2025-11-06\",\r\n  \"seatIds\": [\"SEAT_L1\", \"SEAT_L2\"],\r\n  \"boardingPointId\": \"BP_001\",\r\n  \"droppingPointId\": \"DP_001\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_Url}}/api/seats/lock",
+									"host": [
+										"{{base_Url}}"
+									],
+									"path": [
+										"api",
+										"seats",
+										"lock"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "265"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 11:11:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"One or more seats are already locked or booked\",\n    \"data\": null,\n    \"errors\": [\n        {\n            \"seatId\": \"SEAT_L1\",\n            \"seatNumber\": \"Unknown\",\n            \"status\": \"NotFound\",\n            \"lockedUntil\": null\n        },\n        {\n            \"seatId\": \"SEAT_L2\",\n            \"seatNumber\": \"Unknown\",\n            \"status\": \"NotFound\",\n            \"lockedUntil\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "successfullyBooked",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"busId\": \"BUS_RL_001\",\r\n  \"journeyDate\": \"2025-11-06\",\r\n  \"seatIds\": [\"SEAT_BUS_RL_001_L1\"],\r\n  \"boardingPointId\": \"BP_MUM_001\",\r\n  \"droppingPointId\": \"DP_PUN_001\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_Url}}/api/seats/lock",
+									"host": [
+										"{{base_Url}}"
+									],
+									"path": [
+										"api",
+										"seats",
+										"lock"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "814"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 11:38:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Seats locked successfully\",\n    \"data\": {\n        \"lockId\": \"LOCK_20251106_a96f307b7ab7406f8cb46d613804bec1\",\n        \"sessionId\": \"SESSION_46058dd812b54ff89f444a11f3663998\",\n        \"busId\": \"BUS_RL_001\",\n        \"journeyDate\": \"2025-11-06T00:00:00\",\n        \"lockedSeats\": [\n            {\n                \"seatId\": \"SEAT_BUS_RL_001_L1\",\n                \"seatNumber\": \"L1\",\n                \"price\": 1899\n            }\n        ],\n        \"boardingPoint\": {\n            \"pointId\": \"BP_MUM_001\",\n            \"name\": \"Mumbai Central Station\",\n            \"address\": null,\n            \"time\": \"06:30:00\",\n            \"landmark\": null\n        },\n        \"droppingPoint\": {\n            \"pointId\": \"DP_PUN_001\",\n            \"name\": \"Pune Railway Station\",\n            \"address\": null,\n            \"time\": \"10:00:00\",\n            \"landmark\": null\n        },\n        \"lockExpiresAt\": \"2025-11-06T11:48:28.6591876Z\",\n        \"newExpiryTime\": \"0001-01-01T00:00:00\",\n        \"lockDurationSeconds\": 600,\n        \"remainingSeconds\": 0,\n        \"priceBreakdown\": {\n            \"baseFare\": 1899,\n            \"taxes\": 94.95,\n            \"serviceFee\": 50,\n            \"discount\": 0,\n            \"totalAmount\": 2043.95\n        }\n    },\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "lock/extend",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"lockId\": \"LOCK_20251106_a96f307b7ab7406f8cb46d613804bec1\",\r\n  \"sessionId\": \"SESSION_46058dd812b54ff89f444a11f3663998\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_Url}}/api/seats/lock/extend",
+							"host": [
+								"{{base_Url}}"
+							],
+							"path": [
+								"api",
+								"seats",
+								"lock",
+								"extend"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "extendBookedTime",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"lockId\": \"LOCK_20251106_a96f307b7ab7406f8cb46d613804bec1\",\r\n  \"sessionId\": \"SESSION_46058dd812b54ff89f444a11f3663998\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_Url}}/api/seats/lock/extend",
+									"host": [
+										"{{base_Url}}"
+									],
+									"path": [
+										"api",
+										"seats",
+										"lock",
+										"extend"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "455"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 11:43:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Lock extended successfully\",\n    \"data\": {\n        \"lockId\": \"LOCK_20251106_a96f307b7ab7406f8cb46d613804bec1\",\n        \"sessionId\": \"SESSION_46058dd812b54ff89f444a11f3663998\",\n        \"busId\": null,\n        \"journeyDate\": \"0001-01-01T00:00:00\",\n        \"lockedSeats\": null,\n        \"boardingPoint\": null,\n        \"droppingPoint\": null,\n        \"lockExpiresAt\": \"0001-01-01T00:00:00\",\n        \"newExpiryTime\": \"2025-11-06T11:58:48.5272085Z\",\n        \"lockDurationSeconds\": 0,\n        \"remainingSeconds\": 899,\n        \"priceBreakdown\": null\n    },\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "RELEASE SEAT LOCK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"lockId\": \"LOCK_20251107_5d868feffff647a0aff770e82b1be006\",\r\n  \"sessionId\": \"SESSION_d24652a8ca5b4485841ce7f99e0859e0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_Url}}/api/seats/lock/release",
+							"host": [
+								"{{base_Url}}"
+							],
+							"path": [
+								"api",
+								"seats",
+								"lock",
+								"release"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "seatreleasedSuccessfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"lockId\": \"LOCK_20251106_a96f307b7ab7406f8cb46d613804bec1\",\r\n  \"sessionId\": \"SESSION_46058dd812b54ff89f444a11f3663998\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_Url}}/api/seats/lock/release",
+									"host": [
+										"{{base_Url}}"
+									],
+									"path": [
+										"api",
+										"seats",
+										"lock",
+										"release"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "206"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 11:47:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Seats released successfully\",\n    \"data\": {\n        \"lockId\": \"LOCK_20251106_a96f307b7ab7406f8cb46d613804bec1\",\n        \"releasedSeats\": [\n            \"SEAT_BUS_RL_001_L1\"\n        ],\n        \"releasedAt\": \"2025-11-06T11:47:22.0897239Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "CHECK LOCK STATUS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_Url}}/api/seats/lock/{{lockId}}/status",
+							"host": [
+								"{{base_Url}}"
+							],
+							"path": [
+								"api",
+								"seats",
+								"lock",
+								"{{lockId}}",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "notLocked",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"lockId\": \"LOCK_20251106_a96f307b7ab7406f8cb46d613804bec1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_Url}}/api/seats/lock/{LOCK_20251106_a96f307b7ab7406f8cb46d613804bec1}/status",
+									"host": [
+										"{{base_Url}}"
+									],
+									"path": [
+										"api",
+										"seats",
+										"lock",
+										"{LOCK_20251106_a96f307b7ab7406f8cb46d613804bec1}",
+										"status"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 11:52:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Seat lock not found\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "CHECK LOCK STATUS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_Url}}/api/seats/lock/{{lockId}}/status",
+									"host": [
+										"{{base_Url}}"
+									],
+									"path": [
+										"api",
+										"seats",
+										"lock",
+										"{{lockId}}",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "252"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 07:19:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Lock status retrieved\",\n    \"data\": {\n        \"lockId\": \"LOCK_20251107_5d868feffff647a0aff770e82b1be006\",\n        \"status\": \"Active\",\n        \"lockedSeats\": [\n            \"SEAT_BUS_RL_001_L1\"\n        ],\n        \"expiresAt\": \"2025-11-07T06:43:15.4229345\",\n        \"remainingSeconds\": 0,\n        \"canExtend\": true\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Ijg5YmMxODRiLWIyYmItNDViMi1iZTUxLWI1NjQ3MjYwNTdlZSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InJhamVzaC5rdW1hcjExQGVtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJSYWplc2ggS3VtYXIiLCJqdGkiOiI0MGEzYmI3Ny00ZWUzLTRmZjctOGNlYS00NDI4NjdkYmFkMzgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDdXN0b21lciIsImV4cCI6MTc2MjUwMDY3NCwiaXNzIjoiQnVzQm9va2luZ1N5c3RlbS5BUEkiLCJhdWQiOiJCdXNCb29raW5nU3lzdGVtLkNsaWVudCJ9.W67lJfgon94cRLscsAZ3SpI19CeT8J9-7StrESwfwUE",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_Url",
+			"value": ""
+		},
+		{
+			"key": "lockId",
+			"value": ""
+		}
+	]
+}
